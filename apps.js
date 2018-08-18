@@ -2,6 +2,7 @@
 let myName = "Llewellyn Barrett";  
 const NUMBER_OF_STATES = 50;      
 let num = 5 + 4;
+let favoriteVeggies =['Squash','Cucumber','Collard Greens','Carrots'];
 
 // Test of queueNames function various names values
 queueNames('{John');        // Should display 'Invalid Name'
@@ -13,6 +14,7 @@ queueNames('1kim');         // Should display 'Invalid Name'
 
 
 sayHello();
+displayVeggies(favoriteVeggies);
 
 //
 checkAge('Charles',21);
@@ -57,4 +59,10 @@ function checkAge(name, age){
         console.log(`Sorry ${name}, you aren\'t old enough to view this page!`);
     }
 
+}
+
+function displayVeggies(vegetables){
+    for ( i of vegetables ){
+        console.log(i);
+    }
 }
