@@ -5,6 +5,7 @@
 ---
 
 1. Create a new project folder and connect it to a github repository. Copy this README.md file into it.
+
 2. Create an index.html file and an app.js file and link the two together.
 3. Create a variable that contains your name as a value. Name the variable appropriately.
 4. Create a constant that contains the number of states in the U.S. and name it appropriately.
