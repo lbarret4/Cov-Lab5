@@ -3,14 +3,22 @@ let myName = "Llewellyn Barrett";
 const NUMBER_OF_STATES = 50;      
 let num = 5 + 4;
 
-// Test  of  queueNames function various names  values
-queueNames('{John');        // Should prompt 'Invalid Name'
-queueNames('tom');          // Should prompt 'Back to the line'
-queueNames('Amanda');       // Should prompt 'Next!'
-queueNames('Nancy');        // Should prompt 'Back to the line'
-queueNames('luke');         // Should prompt 'Next!'
-queueNames('1kim');         // Should prompt 'Invalid Name'
+// Test of queueNames function various names values
+queueNames('{John');        // Should display 'Invalid Name'
+queueNames('tom');          // Should display 'Back to the line'
+queueNames('Amanda');       // Should display 'Next!'
+queueNames('Nancy');        // Should display 'Back to the line'
+queueNames('luke');         // Should display 'Next!'
+queueNames('1kim');         // Should display 'Invalid Name'
 
+
+sayHello();
+
+//
+checkAge('Charles',21);
+checkAge('Abby',27);
+checkAge('james',18);
+checkAge('John',17);
 
 //  This function take name and say if the're next in the queue or sent to back of the line.
 function queueNames(name) {
@@ -35,5 +43,18 @@ function queueNames(name) {
     } else {
         //Display 'Next' to console, if the first letters is before letter M. 
         console.log('Next!')
+    }    
+}
+
+// Displays 'Hello World!'
+function sayHello(){
+        console.log('Hello World!');
+}
+
+function checkAge(name, age){
+    name=name[0].toUpperCase()+name.slice(1);
+    if(age < 21){
+        console.log(`Sorry ${name}, you aren\'t old enough to view this page!`);
     }
+
 }
