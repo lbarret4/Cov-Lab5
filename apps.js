@@ -62,7 +62,7 @@ function checkAge(name, age){
 }
 
 function displayVeggies(vegetables){
-    for ( i of vegetables ){
-        console.log(i);
+    for ( i in vegetables ){
+        console.log((+i+1)+'.'+vegetables[i]);
     }
 }
