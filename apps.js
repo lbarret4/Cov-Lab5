@@ -2,9 +2,10 @@
 let myName = "Llewellyn Barrett";  
 const NUMBER_OF_STATES = 50;      
 let num = 5 + 4;
-let favoriteVeggies =['Squash','Cucumber','Collard Greens','Carrots'];
+let favoriteVeggies = ['Squash','Cucumber','Collard Greens','Carrots'];
+let people = [{name:'James',age:20},{name:'Jane',age:15},{name:'Jimmy',age:35},{name:'Jen',age:40},{name:'Jemma',age:21}];
 
-// Test of queueNames function various names values
+// Test of queueNames function with various names values
 queueNames('{John');        // Should display 'Invalid Name'
 queueNames('tom');          // Should display 'Back to the line'
 queueNames('Amanda');       // Should display 'Next!'
@@ -16,11 +17,15 @@ queueNames('1kim');         // Should display 'Invalid Name'
 sayHello();
 displayVeggies(favoriteVeggies);
 
-//
+//Calls queueNames function with various names and age values
 checkAge('Charles',21);
 checkAge('Abby',27);
 checkAge('james',18);
 checkAge('John',17);
+
+for(person of People ){
+    checkAge(person['name'],person['age']);
+};
 
 //  This function take name and say if the're next in the queue or sent to back of the line.
 function queueNames(name) {
@@ -66,3 +71,4 @@ function displayVeggies(vegetables){
         console.log((+i+1)+'.'+vegetables[i]);
     }
 }
+
