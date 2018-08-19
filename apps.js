@@ -3,7 +3,7 @@ let myName = "Llewellyn Barrett";
 const NUMBER_OF_STATES = 50;      
 let num = 5 + 4;
 let favoriteVeggies = ['Squash','Cucumber','Collard Greens','Carrots'];
-let people = [{name:'James',age:20},{name:'Jane',age:15},{name:'Jimmy',age:35},{name:'Jen',age:40},{name:'Jemma',age:21}];
+let people = [{name:'Josh',age:20},{name:'Jane',age:15},{name:'Jimmy',age:35},{name:'Jen',age:40},{name:'Jemma',age:21}];
 let numCharacter = getLength('Hello World');
 
 // Test of queueNames function with various names values
@@ -27,7 +27,7 @@ checkAge('james',18);
 checkAge('John',17);
 
 // Loops through an array of people and calls checkAge function with person's name and age 
-for(person of People ){
+for(person of people ){
     checkAge(person['name'],person['age']);
 };
 
