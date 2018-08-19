@@ -4,6 +4,7 @@ const NUMBER_OF_STATES = 50;
 let num = 5 + 4;
 let favoriteVeggies = ['Squash','Cucumber','Collard Greens','Carrots'];
 let people = [{name:'James',age:20},{name:'Jane',age:15},{name:'Jimmy',age:35},{name:'Jen',age:40},{name:'Jemma',age:21}];
+let numCharacter = getLength('Hello World');
 
 // Test of queueNames function with various names values
 queueNames('{John');        // Should display 'Invalid Name'
@@ -13,9 +14,11 @@ queueNames('Nancy');        // Should display 'Back to the line'
 queueNames('luke');         // Should display 'Next!'
 queueNames('1kim');         // Should display 'Invalid Name'
 
-
+// Calls various functions   
 sayHello();
 displayVeggies(favoriteVeggies);
+checkEvenOrOdd(numCharacter);
+
 
 //Calls queueNames function with various names and age values
 checkAge('Charles',21);
@@ -23,6 +26,7 @@ checkAge('Abby',27);
 checkAge('james',18);
 checkAge('John',17);
 
+// Loops through an array of people and calls checkAge function with person's name and age 
 for(person of People ){
     checkAge(person['name'],person['age']);
 };
@@ -58,6 +62,7 @@ function sayHello(){
         console.log('Hello World!');
 }
 
+// Displays 'Sorry,(person's name) you aren't old enough to view this page!,' if person's age is below 21.
 function checkAge(name, age){
     name=name[0].toUpperCase()+name.slice(1);
     if(age < 21){
@@ -66,9 +71,26 @@ function checkAge(name, age){
 
 }
 
+//Display an orded list of vegtables
 function displayVeggies(vegetables){
     for ( i in vegetables ){
         console.log((+i+1)+'.'+vegetables[i]);
     }
 }
 
+//Return character length of a give string
+function getLength(word){
+    return word.length;
+
+}
+
+// Check if number is even or odd and displays, 'The world is nice and even!' or 'The world is an odd place!',respectively.
+function checkEvenOrOdd(num){
+    if(num % 2 == 0) {
+        console.log('The world is nice and even!');
+    } else {
+        console.log('The world is an odd place!');
+
+    }
+    
+}
